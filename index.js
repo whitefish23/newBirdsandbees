@@ -16,3 +16,14 @@ const swiper = new Swiper('.swiper', {
   },
 
 });
+
+const swiper2 = new Swiper('.swiper-events', {
+  loop: true,
+
+
+  navigation: {
+    nextEl: '.swiper-events__button-next',
+    prevEl: '.swiper-events__button-prev',
+  },
+
+});
