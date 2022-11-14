@@ -1,13 +1,14 @@
-const swiper = new Swiper('.swiper', {
+const swiperMain = new Swiper('.swiper', {
   loop: true,
 
   pagination: {
     el: '.swiper-pagination__body',
     clickable: true,
     type: 'custom',
-    bulletClass:'swiper-pagination__box-name',
+    bulletClass: 'swiper-pagination__box-name',
     
-    
+
+
   },
 
   navigation: {
@@ -17,13 +18,24 @@ const swiper = new Swiper('.swiper', {
 
 });
 
-const swiper2 = new Swiper('.swiper-events', {
-  loop: true,
+swiperEvents = new Swiper('.swiper-events', {
+  loop: false,
+
+  slidesPerView: 3,
+  spaceBetween: 31,
+  centeredSlides: false,
 
 
   navigation: {
-    nextEl: '.swiper-events__button-next',
-    prevEl: '.swiper-events__button-prev',
+    nextEl: '.events__button-next',
+    prevEl: '.events__button-prev',
   },
+
+  scrollbar: {
+    el: '.event-scrollbar',
+    dragSize: 74,
+    draggable: true,
+  }
+
 
 });
