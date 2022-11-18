@@ -18,7 +18,7 @@ const swiperMain = new Swiper('.swiper', {
 
 });
 
-swiperEvents = new Swiper('.swiper-events', {
+swiperEvents = new Swiper('.swiper-meetings', {
   loop: false,
 
   slidesPerView: 3,
@@ -27,12 +27,12 @@ swiperEvents = new Swiper('.swiper-events', {
 
 
   navigation: {
-    nextEl: '.events__button-next',
-    prevEl: '.events__button-prev',
+    nextEl: '.meetings__button-next',
+    prevEl: '.meetings__button-prev',
   },
 
   scrollbar: {
-    el: '.event-scrollbar',
+    el: '.meetings-scrollbar',
     dragSize: 74,
     draggable: true,
   }
