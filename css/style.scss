@@ -184,10 +184,8 @@
   }
 
   &__block-numbers {
-    margin-right: 54px;
-  }
-
-  &__block-numbers {
+    display: flex;
+    flex-direction: column;
     margin-right: 54px;
   }
 
@@ -467,6 +465,7 @@
   &__img {
     margin-bottom: 30px;
     width: 100%;
+    height: 100%;
     border-radius: 4px;
     cursor: pointer;
   }
@@ -525,17 +524,16 @@
     margin-bottom: 54px;
   }
 
-  &__options {
+  &__tabs {
     font-weight: 600;
     font-size: 16px;
     line-height: 20px;
     margin-right: 39px;
+    cursor: pointer;
   }
 
   &__card-section {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -30px;
+    display: none;
   }
 
   &__card-wrapper {
@@ -545,6 +543,7 @@
   }
 
   &__card:hover {
+    border-radius: 4px;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
   }
 
@@ -556,6 +555,7 @@
   &__card-img {
     width: 100%;
     height: 320px;
+    border-radius: 4px;
     object-fit: cover;
   }
 
@@ -591,6 +591,16 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
+  }
+
+  &__tabs--active {
+    color: #e3bf77;
+  }
+
+  &__card-section--active {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
   }
 }
 
@@ -657,6 +667,10 @@
     margin-bottom: 50px;
   }
 
+  &__card {
+    margin-right: 30px;
+  }
+
   &__button {
     border: 2px solid rgba(227, 191, 119, 1);
     padding: 10px 30px;
@@ -684,10 +698,11 @@
   }
 
   &__card-img {
-    width: 100%;
-    height: 295px;
+    max-width: 100%;
+    max-height: 295px;
     border-radius: 5px;
     object-fit: cover;
+    display: block;
   }
 
   &__card-content {
@@ -757,6 +772,11 @@
 
   &__booking-phone:hover {
     opacity: 80%;
+  }
+
+  &__namber {
+    display: flex;
+    flex-direction: column;
   }
 
   &__number-basic {
@@ -859,7 +879,7 @@
     border-bottom: #414141 2px solid;
     padding: 2px;
   }
-  &__info_container {
+  &__info-container {
     display: flex;
   }
 }
@@ -912,7 +932,6 @@
   }
 
   .swiper-slide {
-
     &__button-wrapper {
       display: flex;
       flex-direction: column;
@@ -928,12 +947,68 @@
     &__wrapper-content {
       width: 100%;
     }
-
-   
   }
-
 
   .swiper-pagination {
     display: none;
+  }
+
+  .halls {
+    &__card-section {
+      flex-direction: column;
+    }
+
+    &__card-wrapper {
+      width: 100%;
+    }
+
+    &__card-img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &__card {
+      height: 167px;
+    }
+
+    &__content {
+      padding: 20px 20px;
+    }
+
+    &__title {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &__title-sub {
+      font-size: 12px;
+    }
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .footer {
+    &__body {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .footer-regulations {
+    &__info {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__info-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__privacy {
+      margin-right: 0;
+    }
   }
 }

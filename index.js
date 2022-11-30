@@ -39,3 +39,44 @@ swiperEvents = new Swiper('.swiper-meetings', {
 
 
 });
+
+
+const tabsBtn = document.querySelectorAll('.halls__tabs');
+const tabsItems = document.querySelectorAll('.halls__card-section');
+
+tabsBtn.forEach(function(button) {
+  button.addEventListener('click', function() {
+
+    let currentBtn = button;
+    let tabId = currentBtn.getAttribute('data-tab');
+    let currentTab = document.querySelector(tabId);
+
+
+    tabsBtn.forEach(function(button) {
+      button.classList.remove('halls__tabs--active')
+    });
+
+    tabsItems.forEach(function(button) {
+      button.classList.remove('halls__card-section--active')
+    });
+
+
+
+    currentBtn.classList.add('halls__tabs--active');
+    currentTab.classList.add('halls__card-section--active')
+
+  });
+})
+
+document.querySelector('.halls__tabs').click();
+
+
+
+document.querySelectorAll('.halls__tabs').forEach((buttonX) => {
+  buttonX.addEventListener('click', function() {
+    const parentX = this.parentNode.getBoundingClientRect().x
+    const elmX = this.getBoundingClientRect().x
+    const delta = elmX - parentX
+    console.log(delta)
+  })
+})
