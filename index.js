@@ -1,3 +1,5 @@
+//---Swiper main
+
 const swiperMain = new Swiper('.swiper', {
   loop: true,
 
@@ -6,10 +8,10 @@ const swiperMain = new Swiper('.swiper', {
     clickable: true,
     type: 'custom',
     bulletClass: 'swiper-pagination__box-name',
+
     
-
-
   },
+
 
   navigation: {
     nextEl: '.swiper-slide__button-next',
@@ -18,12 +20,22 @@ const swiperMain = new Swiper('.swiper', {
 
 });
 
+//---swiper meet
+
 swiperEvents = new Swiper('.swiper-meetings', {
   loop: false,
 
   slidesPerView: 3,
   spaceBetween: 31,
   centeredSlides: false,
+  
+  breakpoints: {
+    320: {
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+    },
+  
+  },
 
 
   navigation: {
@@ -36,10 +48,9 @@ swiperEvents = new Swiper('.swiper-meetings', {
     dragSize: 74,
     draggable: true,
   }
-
-
 });
 
+//---halls tabs
 
 const tabsBtn = document.querySelectorAll('.halls__tabs');
 const tabsItems = document.querySelectorAll('.halls__card-section');
@@ -70,7 +81,7 @@ tabsBtn.forEach(function(button) {
 
 document.querySelector('.halls__tabs').click();
 
-
+//--- scroll in halls
 
 document.querySelectorAll('.halls__tabs').forEach((buttonX) => {
   buttonX.addEventListener('click', function() {
@@ -80,3 +91,9 @@ document.querySelectorAll('.halls__tabs').forEach((buttonX) => {
     console.log(delta)
   })
 })
+
+//---cross
+
+document.querySelector('.header__mini-menu').addEventListener('click', function() {
+	this.classList.toggle("--active")
+});
