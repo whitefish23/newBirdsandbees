@@ -1,5 +1,7 @@
 //---Swiper main
 
+const btn = document.querySelectorAll('.swiper-pagination__box-name')
+
 const swiperMain = new Swiper('.swiper', {
   loop: true,
 
@@ -8,15 +10,23 @@ const swiperMain = new Swiper('.swiper', {
     clickable: true,
     type: 'custom',
     bulletClass: 'swiper-pagination__box-name',
-
-    
   },
-
 
   navigation: {
     nextEl: '.swiper-slide__button-next',
     prevEl: '.swiper-slide__button-prev',
   },
+  
+
+  on: {
+    slideChange(swiper) {
+      const target = [...btn][swiper.activeIndex - 1]
+      btn.forEach(function (button) {
+        button.classList.remove("swiper-pagination__box-name--active")
+      })
+      target.classList.add("swiper-pagination__box-name--active")
+    }
+  }
 
 });
 
@@ -25,14 +35,14 @@ const swiperMain = new Swiper('.swiper', {
 swiperEvents = new Swiper('.swiper-meetings', {
   loop: false,
 
-  slidesPerView: 3,
-  spaceBetween: 31,
+  slidesPerView: 1.5,
+  spaceBetween: 40,
   centeredSlides: false,
   
   breakpoints: {
     320: {
       slidesPerView: 1.2,
-      spaceBetween: 20,
+      spaceBetween: 15,
     },
   
   },
@@ -48,6 +58,29 @@ swiperEvents = new Swiper('.swiper-meetings', {
     dragSize: 74,
     draggable: true,
   }
+});
+
+
+//--sweiper reports
+
+const swiperPhoto = new Swiper('.swiper-photo', {
+  slidesPerView: 1,
+  spaceBetween: 10,
+ 
+  breakpoints: {
+    
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    
+    940: {
+      slidesPerView: 3,
+      spaceBetween: 20
+    }
+  },
+  
+ 
 });
 
 //---halls tabs
@@ -92,8 +125,35 @@ document.querySelectorAll('.halls__tabs').forEach((buttonX) => {
   })
 })
 
-//---cross
+//---menu-mob
 
-document.querySelector('.header__mini-menu').addEventListener('click', function() {
-	this.classList.toggle("--active")
-});
+document.querySelector('.left-btn').addEventListener('click', function() {
+  this.classList.toggle('left-btn--active')        
+ });
+ 
+ let btnActv = document.querySelector('.left-btn')
+ let menuActv = document.querySelector('.left-menu')
+ let bodyAct = document.querySelector('.body')
+ 
+ btnActv.addEventListener('click', function (event) {
+   event.stopPropagation();
+  
+   bodyAct.classList.toggle('body--active');
+   menuActv.classList.toggle('left-menu--active');
+ });
+ 
+ menuActv.addEventListener('click', function (e) {
+   e.stopPropagation();
+ });
+ 
+ bodyAct.addEventListener('click', function () {
+   bodyAct.classList.remove('body--active');
+ });
+ 
+ bodyAct.addEventListener('click', function () {
+   btnActv.classList.remove('left-btn--active');
+ });
+ 
+ bodyAct.addEventListener('click', function () {
+   btnActv.classList.remove('left-menu--active');
+ });
