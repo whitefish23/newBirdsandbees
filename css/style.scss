@@ -3,7 +3,7 @@
   font-family: "Montserrat";
   font-size: 14px;
   overflow-x: hidden;
-  overflow: scroll;
+  
 }
 
 .body--active {
@@ -302,8 +302,15 @@
     object-fit: cover;
   }
 
-  &__wrapper-content {
-    margin-top: 40%;
+  &__center {
+    max-width: 1268px;
+    margin: 0 auto;
+    padding-left: 115px;
+    padding-right: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &__title {
@@ -601,6 +608,7 @@
   &__card {
     position: relative;
     height: 320px;
+    display: block;
   }
 
   &__card-img {
@@ -661,21 +669,32 @@
     opacity: 10%;
   }
 
+  &__current {
+    height: 4px;
+    background-color: #e3bf77;
+    position: absolute;
+  }
+
   &__wrapper {
     margin-bottom: 55px;
   }
 }
 
-.dilivery {
+.delivery {
   margin-top: 90px;
-  background: url(/img/eat.png) #e3bf77;
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-position: 100%;
+  background: #e3bf77;
   color: #ffffff;
   margin-bottom: 123px;
   position: relative;
   padding: 157px 0px;
+
+  &__bg {
+    position: absolute;
+    z-index: 1;
+    right: -180px;
+    top: 0px;
+    height: 100%;
+  }
 
   &__title {
     font-weight: 700;
@@ -752,6 +771,7 @@
     max-width: 359px;
     height: 100%;
     position: relative;
+    display: block;
   }
 
   &__wrapper-card:hover {
@@ -942,8 +962,33 @@
     border-bottom: #414141 2px solid;
     padding: 2px;
   }
+
   &__info-container {
     display: flex;
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+
+  &__label:hover {
+    opacity: 80%;
+  }
+
+  &__privacy {
+    cursor: pointer;
+  }
+
+  &__privacy:hover {
+    opacity: 80%;
+  }
+
+  &__articles {
+    cursor: pointer;
+  }
+
+  &__articles:hover {
+    opacity: 80%;
   }
 }
 
@@ -983,12 +1028,9 @@
     left: 16px;
     cursor: pointer;
     display: block;
-    
-   
 
     &--active {
       .left-btn {
-        
         &__line {
           &:first-child {
             transform: rotate(45deg);
@@ -1021,7 +1063,7 @@
       border-radius: 11px;
       z-index: 4;
     }
-  } 
+  }
 
   .header-mini {
     position: absolute;
@@ -1087,7 +1129,7 @@
     width: 300px;
     height: 100vh;
     background: #fff;
-    padding: 80px 15px 30px;
+    padding: 48px 15px 30px;
 
     &__list {
       position: absolute;
@@ -1107,7 +1149,7 @@
       font-size: 14px;
       line-height: 16px;
       font-weight: 700;
-      padding: 10px 0;
+      padding: 11px 0;
     }
 
     &__item:hover {
@@ -1220,9 +1262,9 @@
       margin-right: 0;
     }
 
-    &__wrapper-content {
+    &__center {
       width: 100%;
-      margin-top: 45%;
+      padding: 0px 15px;
     }
 
     &__navigation-slide {
@@ -1346,7 +1388,7 @@
     font-size: 22px;
   }
 
-  .dilivery {
+  .delivery {
     background-position: 65% 80%;
     padding: 90px 0px;
     margin-top: 31px;
@@ -1358,6 +1400,14 @@
     &__desk {
       font-size: 14px;
       line-height: 21px;
+    }
+
+    &__bg {
+      position: absolute;
+      z-index: 1;
+      right: -380px;
+      top: 0px;
+      height: 100%;
     }
   }
 

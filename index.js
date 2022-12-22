@@ -71,12 +71,12 @@ const swiperPhoto = new Swiper('.swiper-photo', {
     
     480: {
       slidesPerView: 2,
-      spaceBetween: 20
+      spaceBetween: 10
     },
     
     940: {
       slidesPerView: 3,
-      spaceBetween: 20
+      spaceBetween: 10
     }
   },
   
@@ -112,18 +112,30 @@ tabsBtn.forEach(function(button) {
   });
 })
 
-document.querySelector('.halls__tabs').click();
-
 //--- scroll in halls
 
-document.querySelectorAll('.halls__tabs').forEach((buttonX) => {
-  buttonX.addEventListener('click', function() {
-    const parentX = this.parentNode.getBoundingClientRect().x
-    const elmX = this.getBoundingClientRect().x
-    const delta = elmX - parentX
-    console.log(delta)
-  })
-})
+document.querySelector('.halls__tabs').click();
+
+function currentAnimate(tab) {
+  const cart = document.querySelector('.halls__current')
+  const parentX = tab.parentNode.getBoundingClientRect().x
+  const elmX = tab.getBoundingClientRect().x
+  const delta = elmX - parentX
+
+  cart.style.transform = `translateX(${delta}px)`
+  cart.style.width = tab.getBoundingClientRect().width + 'px'
+
+  currentAnimate(tabsBtn[0])
+  tabsBtn.forEach(function(tab) {
+    tab.addEventListener('click', function () {
+      tabsControl (this)
+      currentAnimate
+    })
+  }) 
+
+
+}
+
 
 //---menu-mob
 
@@ -157,3 +169,5 @@ document.querySelector('.left-btn').addEventListener('click', function() {
  bodyAct.addEventListener('click', function () {
    btnActv.classList.remove('left-menu--active');
  });
+
+ 

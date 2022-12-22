@@ -131,22 +131,20 @@
     </div>
   </div>
 
-
   <div class="header-mini">
     <div class="container">
       <div class="header-mini__wrapper">
         <div class="header-mini__null"></div>
         <div class="header-mini__logo">
-          <img src="/svg/logo.svg" alt="" class="header-mini__icon-logo">
+          <img src="./svg/logo.svg" alt="" class="header-mini__icon-logo">
         </div>
         <div class="header-mini__basket">
-          <img src="/svg/basket.svg" alt="" class="header-mini__icon-basket">
+          <img src="./svg/basket.svg" alt="" class="header-mini__icon-basket">
           <div class="header-mini__basket-num">2</div>
         </div>
       </div>
     </div>
   </div>
-
 
   <div class="left-menu">
     <div class="left-menu__menu-nav">
@@ -177,7 +175,6 @@
     </div>
 
   </div>
-
 
   <header class="header">
     <div class="container">
@@ -247,7 +244,7 @@
         <div class="swiper-slide__background">
           <img src="./img/bg-resto.jpg" alt="" class="swiper-slide__background-img">
         </div>
-        <div class="container">
+        <div class="swiper-slide__center">
           <div class="swiper-slide__wrapper-content">
             <div class="swiper-slide__title">Ресторан</div>
             <div class="swiper-slide__subtitle">Идеальное место для вашего праздника!</div>
@@ -282,7 +279,7 @@
         <div class="swiper-slide__background">
           <img src="./img/bg-song.jpg" alt="" class="swiper-slide__background-img">
         </div>
-        <div class="container">
+        <div class="swiper-slide__center">
           <div class="swiper-slide__wrapper-content">
             <div class="swiper-slide__title">Караоке-бар</div>
             <div class="swiper-slide__subtitle">Идеальное место для шумной компании!</div>
@@ -291,7 +288,6 @@
                 <div class="swiper-slide__day">ПН — ЧТ</div>
                 <div class="swiper-slide__time">10:00 — 00:00</div>
               </div>
-
             </div>
             <div class="swiper-slide__booking">
               <div class="swiper-slide__button-wrapper">
@@ -314,7 +310,8 @@
         <div class="swiper-slide__background">
           <img src="./img/bg-baby.jpg" alt="" class="swiper-slide__background-img">
         </div>
-        <div class="container">
+
+        <div class="swiper-slide__center">
           <div class="swiper-slide__wrapper-content">
             <div class="swiper-slide__title">Детский клуб</div>
             <div class="swiper-slide__subtitle">Идеальное место для ваших детей!</div>
@@ -344,12 +341,13 @@
             </div>
           </div>
         </div>
+
       </div>
       <div class="swiper-slide">
         <div class="swiper-slide__background">
           <img src="./img/bg-park.jpg" alt="" class="swiper-slide__background-img">
         </div>
-        <div class="container">
+        <div class="swiper-slide__center">
           <div class="swiper-slide__wrapper-content">
             <div class="swiper-slide__title">Веревочный парк</div>
             <div class="swiper-slide__subtitle">Идеальное место для всей семьи!</div>
@@ -384,7 +382,7 @@
         <div class="swiper-slide__background">
           <img src="./img/bg-pool.jpg" alt="" class="swiper-slide__background-img">
         </div>
-        <div class="container">
+        <div class="swiper-slide__center">
           <div class="swiper-slide__wrapper-content">
             <div class="swiper-slide__title">Бассейн</div>
             <div class="swiper-slide__subtitle">Идеальное место для занятия спортом!</div>
@@ -419,7 +417,7 @@
         <div class="swiper-slide__background">
           <img src="./img/bg-bed.jpg" alt="" class="swiper-slide__background-img">
         </div>
-        <div class="container">
+        <div class="swiper-slide__center">
           <div class="swiper-slide__wrapper-content">
             <div class="swiper-slide__title">Отель</div>
             <div class="swiper-slide__subtitle">Идеальное место для вашего отдыха!</div>
@@ -602,14 +600,17 @@
             <div class="halls__tabs" data-tab='#tab_4'>Индивидуальные</div>
             <div class="halls__tabs" data-tab='#tab_5'>Караоке</div>
           </div>
-          <div class="halls__scroll"></div>
+          <div class="halls__scroll">
+            <div class="halls__current"></div>
+          </div>
         </div>
       </div>
 
       <div class="halls__tabs-content">
+
         <div class="halls__card-section" id='tab_1'>
-          <a href="#" class="halls__card-wrapper">
-            <div class="halls__card">
+          <div class="halls__card-wrapper">
+            <a href="" class="halls__card">
               <img src="./img/img-room-big.jpg" alt="" class="halls__card-img">
               <div class="halls__content">
                 <div class="halls__guests">до 160 гостей</div>
@@ -618,11 +619,10 @@
                   <div class="halls__title-sub">Роскошный банкетный зал в мягком классическом дизайне.</div>
                 </div>
               </div>
-
-            </div>
-          </a>
-          <a href="#" class="halls__card-wrapper">
-            <div class="halls__card">
+            </a>
+          </div>
+          <div class="halls__card-wrapper">
+            <a href="" class="halls__card">
               <img src="./img/img-room-gold.jpg" alt="" class="halls__card-img">
               <div class="halls__content">
                 <div class="halls__guests">до 12 гостей</div>
@@ -632,10 +632,10 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </a>
-          <a href="#" class="halls__card-wrapper">
-            <div class="halls__card">
+            </a>
+          </div>
+          <div class="halls__card-wrapper">
+            <a href="" class="halls__card">
               <img src="./img/img-room-flowers.jpg" alt="" class="halls__card-img">
               <div class="halls__content">
                 <div class="halls__guests">до 100 гостей</div>
@@ -644,10 +644,10 @@
                   <div class="halls__title-sub">Настоящая оранжерея с панорамными окнами, мягкими диванами.</div>
                 </div>
               </div>
-            </div>
-          </a>
-          <a href="#" class="halls__card-wrapper">
-            <div class="halls__card">
+            </a>
+          </div>
+          <div class="halls__card-wrapper">
+            <a href="" class="halls__card">
               <img src="./img/img-room-living.jpg" alt="" class="halls__card-img">
               <div class="halls__content">
                 <div class="halls__guests">до 100 гостей</div>
@@ -657,10 +657,10 @@
                     бассейна.</div>
                 </div>
               </div>
-            </div>
-          </a>
-          <a href="#" class="halls__card-wrapper">
-            <div class="halls__card">
+            </a>
+          </div>
+          <div class="halls__card-wrapper">
+            <a href="" class="halls__card">
               <img src="./img/img-room-loft.jpg" alt="" class="halls__card-img">
               <div class="halls__content">
                 <div class="halls__guests">до 30 гостей</div>
@@ -669,10 +669,10 @@
                   <div class="halls__title-sub">Зал в модном стиле лофт для индивидуальных мероприятий.</div>
                 </div>
               </div>
-            </div>
-          </a>
-          <a href="#" class="halls__card-wrapper">
-            <div class="halls__card">
+            </a>
+          </div>
+          <div class="halls__card-wrapper">
+            <a href="" class="halls__card">
               <img src="./img/img-room-karaoke.jpg" alt="" class="halls__card-img">
               <div class="halls__content">
                 <div class="halls__guests">до 40 гостей</div>
@@ -681,10 +681,10 @@
                   <div class="halls__title-sub">Роскошный деревянный интерьер в стиле австрийского шале.</div>
                 </div>
               </div>
-            </div>
-          </a>
-          <a href="#" class="halls__card-wrapper">
-            <div class="halls__card">
+            </a>
+          </div>
+          <div class="halls__card-wrapper">
+            <a href="" class="halls__card">
               <img src="./img/img-room-hollow.jpg" alt="" class="halls__card-img">
               <div class="halls__content">
                 <div class="halls__guests">до 20 гостей</div>
@@ -693,10 +693,10 @@
                   <div class="halls__title-sub">Роскошный деревянный интерьер в стиле австрийского шале.</div>
                 </div>
               </div>
-            </div>
-          </a>
-          <a href="#" class="halls__card-wrapper">
-            <div class="halls__card">
+            </a>
+          </div>
+          <div class="halls__card-wrapper">
+            <a href="" class="halls__card">
               <img src="./img/img-room-dances.jpg" alt="" class="halls__card-img">
               <div class="halls__content">
                 <div class="halls__guests">до 50 гостей</div>
@@ -705,13 +705,13 @@
                   <div class="halls__title-sub">Модный стильный фьюжен дизайн.</div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
 
         <div class="halls__card-section" id='tab_2'>
-          <a href="#" class="halls__card-wrapper">
-            <div class="halls__card">
+          <div class="halls__card-wrapper">
+            <a href="" class="halls__card">
               <img src="./img/img-room-big.jpg" alt="" class="halls__card-img">
               <div class="halls__content">
                 <div class="halls__guests">до 160 гостей</div>
@@ -720,10 +720,10 @@
                   <div class="halls__title-sub">Роскошный банкетный зал в мягком классическом дизайне.</div>
                 </div>
               </div>
-            </div>
-          </a>
-          <a href="#" class="halls__card-wrapper">
-            <div class="halls__card">
+            </a>
+          </div>
+          <div class="halls__card-wrapper">
+            <a href="" class="halls__card">
               <img src="./img/img-room-living.jpg" alt="" class="halls__card-img">
               <div class="halls__content">
                 <div class="halls__guests">до 100 гостей</div>
@@ -733,13 +733,13 @@
                     бассейна.</div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
 
         <div class="halls__card-section" id='tab_3'>
-          <a href="#" class="halls__card-wrapper">
-            <div class="halls__card">
+          <div class="halls__card-wrapper">
+            <a href="" class="halls__card">
               <img src="./img/img-room-gold.jpg" alt="" class="halls__card-img">
               <div class="halls__content">
                 <div class="halls__guests">до 12 гостей</div>
@@ -749,10 +749,10 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </a>
-          <a href="#" class="halls__card-wrapper">
-            <div class="halls__card">
+            </a>
+          </div>
+          <div class="halls__card-wrapper">
+            <a href="" class="halls__card">
               <img src="./img/img-room-flowers.jpg" alt="" class="halls__card-img">
               <div class="halls__content">
                 <div class="halls__guests">до 100 гостей</div>
@@ -761,13 +761,13 @@
                   <div class="halls__title-sub">Настоящая оранжерея с панорамными окнами, мягкими диванами.</div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
 
         <div class="halls__card-section" id='tab_4'>
-          <a href="#" class="halls__card-wrapper">
-            <div class="halls__card">
+          <div class="halls__card-wrapper">
+            <a href="" class="halls__card">
               <img src="./img/img-room-hollow.jpg" alt="" class="halls__card-img">
               <div class="halls__content">
                 <div class="halls__guests">до 20 гостей</div>
@@ -776,10 +776,10 @@
                   <div class="halls__title-sub">Роскошный деревянный интерьер в стиле австрийского шале.</div>
                 </div>
               </div>
-            </div>
-          </a>
-          <a href="#" class="halls__card-wrapper">
-            <div class="halls__card">
+            </a>
+          </div>
+          <div class="halls__card-wrapper">
+            <a href="" class="halls__card">
               <img src="./img/img-room-karaoke.jpg" alt="" class="halls__card-img">
               <div class="halls__content">
                 <div class="halls__guests">до 40 гостей</div>
@@ -788,13 +788,13 @@
                   <div class="halls__title-sub">Роскошный деревянный интерьер в стиле австрийского шале.</div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
 
         <div class="halls__card-section" id='tab_5'>
-          <a href="#" class="halls__card-wrapper">
-            <div class="halls__card">
+          <div class="halls__card-wrapper">
+            <a href="" class="halls__card">
               <img src="./img/img-room-dances.jpg" alt="" class="halls__card-img">
               <div class="halls__content">
                 <div class="halls__guests">до 50 гостей</div>
@@ -803,23 +803,22 @@
                   <div class="halls__title-sub">Модный стильный фьюжен дизайн.</div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
-
-
       </div>
     </div>
   </section>
 
-  <section class="dilivery">
-
+  <section class="delivery">
     <div class="container">
-      <div class="dilivery__title">Доставка</div>
-      <div class="dilivery__desk">С другой стороны дальнейшее развитие различных форм деятельности позволяет оценить
-        значение форм развития.</div>
-      <a href="https://www.thesavoylondon.com/" class="dilivery__link-menu">
-        <button class="dilivery__button">
+      <img src="./img/frame.png" alt="" class="delivery__bg">
+      <div class="delivery__title">Доставка</div>
+      <div class="delivery__desk">С другой стороны дальнейшее развитие различных форм деятельности позволяет оценить
+        значение форм развития.
+      </div>
+      <a href="https://www.thesavoylondon.com/" class="delivery__link-menu">
+        <button class="delivery__button">
           Посмотреть меню
         </button>
       </a>
@@ -840,45 +839,45 @@
       <div class="reports__cards-section swiper-photo">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <a href="#" class="reports__card">
-              <div class="reports__wrapper-card">
+            <div class="reports__card">
+              <a href="#" class="reports__wrapper-card">
                 <img src="./img/img-owl.jpg" alt="" class="reports__card-img">
                 <div class="reports__card-content">
                   <div class="reports__time">31 мая</div>
                   <div class="reports__desk">День рождения Софии в стиле Гарри Поттера!</div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
           <div class="swiper-slide">
-            <a href="#" class="reports__card">
-              <div class="reports__wrapper-card">
+            <div class="reports__card">
+              <a href="#" class="reports__wrapper-card">
                 <img src="./img/img-children.jpg" alt="" class="reports__card-img">
                 <div class="reports__card-content">
                   <div class="reports__time">25 мая</div>
                   <div class="reports__desk">Выпускной начальной школы</div>
                 </div>
-              </div>
-            </a>
+            </div>
           </div>
           <div class="swiper-slide">
-            <a href="#" class="reports__card">
-              <div class="reports__wrapper-card">
+            <div class="reports__card">
+              <a href="#" class="reports__wrapper-card">
                 <img src="./img/img-holiday.jpg" alt="" class="reports__card-img">
                 <div class="reports__card-content">
                   <div class="reports__time">9 мая</div>
                   <div class="reports__desk">Праздник Дня Победы</div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="reports__button-wrp">
-        <button class="reports__button--mini">
-          Все фотоотчеты
-        </button>
-      </div>
+    </div>
+    <div class="reports__button-wrp">
+      <button class="reports__button--mini">
+        Все фотоотчеты
+      </button>
+    </div>
     </div>
   </section>
 
