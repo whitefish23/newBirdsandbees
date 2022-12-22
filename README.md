@@ -1,1 +1,1 @@
-https://whitefish23.github.io/newBirdsandbees/
+whitefish23.github.io/newBirdsandbees/
