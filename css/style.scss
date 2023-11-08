@@ -3,7 +3,6 @@
   font-family: "Montserrat";
   font-size: 14px;
   overflow-x: hidden;
-  
 }
 
 .body--active {
@@ -37,7 +36,7 @@
   z-index: 3;
   box-shadow: -6px -1px 7px 0px #414141;
   overflow: hidden;
-  transition: 0.2s;
+  transition: 0.5s;
 
   &__link {
     display: flex;
@@ -54,6 +53,7 @@
     color: #ffffff;
     background: #e3bf77;
     box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.07);
+    transition: 0.2s;
   }
 
   &__menu-icon {
@@ -79,9 +79,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     height: 50px;
     width: 100px;
+    cursor: pointer;
   }
 
   &__social-block {
@@ -471,6 +471,10 @@
     max-width: 359px;
   }
 
+  &__card:hover {
+    opacity: 90%;
+  }
+
   &__title {
     font-weight: 700;
     font-size: 30px;
@@ -590,6 +594,10 @@
     cursor: pointer;
   }
 
+  &__tabs:hover {
+    opacity: 60%;
+  }
+
   &__card-section {
     display: none;
   }
@@ -601,6 +609,7 @@
   }
 
   &__card:hover {
+    opacity: 90%;
     border-radius: 4px;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
   }
@@ -772,6 +781,10 @@
     height: 100%;
     position: relative;
     display: block;
+  }
+
+  &__wrapper-card:hover {
+    opacity: 90%;
   }
 
   &__wrapper-card:hover {
@@ -992,6 +1005,7 @@
   }
 }
 
+
 @media (max-width: 1024px) {
   .body {
     &__bg {
@@ -1165,6 +1179,7 @@
       display: flex;
       justify-content: space-between;
       padding-top: 20px;
+      cursor: pointer;
     }
 
     &__info {
